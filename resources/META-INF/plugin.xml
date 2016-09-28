@@ -1,0 +1,46 @@
+<idea-plugin version="2">
+    <id>IntelliJ-Shortcuts-For-AEM</id>
+    <name>IntelliJ Shortcuts For AEM</name>
+    <version>1.0.1</version>
+    <vendor email="dawid.lewandowski@cognifide.com" url="http://www.cognifide.com">Cognifide</vendor>
+
+    <description><![CDATA[
+      IntelliJ Shortcuts For AEM supports following operations: <br/>
+      <ul>
+        <li>Create AEM Component</li>
+        <li>Create Sling Folder</li>
+      </ul>
+    ]]></description>
+
+    <change-notes><![CDATA[
+    ]]>
+    </change-notes>
+
+    <!-- please see http://www.jetbrains.org/intellij/sdk/docs/basics/getting_started/build_number_ranges.html for description -->
+    <idea-version since-build="141.0"/>
+
+    <!-- please see http://www.jetbrains.org/intellij/sdk/docs/basics/getting_started/plugin_compatibility.html
+         on how to target different products -->
+    <!-- uncomment to enable plugin in all products
+    <depends>com.intellij.modules.lang</depends>
+    -->
+
+    <extensions defaultExtensionNs="com.intellij">
+        <!-- Add your extensions here -->
+    </extensions>
+
+    <actions>
+        <!-- Add your actions here -->
+        <action id="aem.shortcut.createComponent"
+                class="com.cognifide.intellij.shortcuts.newitem.component.NewAemComponentAction"
+                text="Create AEM Component" description="Creates all files required by AEM to define a component">
+            <add-to-group group-id="NewGroup" anchor="last"/>
+        </action>
+        <action id="aem.shortcut.createSlingFolder"
+                class="com.cognifide.intellij.shortcuts.newitem.folder.NewSlingFolder"
+                text="Create Sling Folder" description="Creates all files required by AEM to define Sling folder">
+            <add-to-group group-id="NewGroup" anchor="last"/>
+        </action>
+    </actions>
+
+</idea-plugin>
