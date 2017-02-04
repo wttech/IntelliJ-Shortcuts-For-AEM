@@ -7,7 +7,7 @@ public class TouchDialogTemplatesProvider implements DefaultLiveTemplatesProvide
 
     @Override
     public String[] getDefaultLiveTemplateFiles() {
-        return new String[]{"liveTemplates/HTL"};
+        return new String[]{"liveTemplates/TouchUI"};
     }
 
     @Nullable
